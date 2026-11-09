@@ -23,7 +23,7 @@ const imageVariants = {
 }
 
 export default function ProjectCard({ project, index = 0 }) {
-  const { title, description, image, icon: Icon, tags, github, demo } = project
+  const { title, description, image, icon: Icon, tags, github, demo, status } = project
 
   // Posición del cursor para el efecto "spotlight" y el borde luminoso
   const mouseX = useMotionValue(0)
@@ -96,9 +96,16 @@ export default function ProjectCard({ project, index = 0 }) {
         {/* Contenido */}
         <div className="relative z-20 flex flex-1 flex-col gap-4 p-6">
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold tracking-tight text-white">
-              {title}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-semibold tracking-tight text-white">
+                {title}
+              </h3>
+              {status && (
+                <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-400">
+                  {status}
+                </span>
+              )}
+            </div>
             <p className="text-sm leading-relaxed text-zinc-400">
               {description}
             </p>
@@ -118,15 +125,17 @@ export default function ProjectCard({ project, index = 0 }) {
 
           {/* Acciones: objetivos táctiles de 44px+ (Ley de Fitts) */}
           <div className="mt-auto flex gap-3 pt-2">
-            <a
-              href={demo}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-accent-electric px-4 text-sm font-medium text-white transition hover:bg-accent-sky hover:shadow-glow-sm active:bg-accent-sapphire"
-            >
-              <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              Ver demo
-            </a>
+            {demo && (
+              <a
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-accent-electric px-4 text-sm font-medium text-white transition hover:bg-accent-sky hover:shadow-glow-sm active:bg-accent-sapphire"
+              >
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                Ver demo
+              </a>
+            )}
             <a
               href={github}
               target="_blank"

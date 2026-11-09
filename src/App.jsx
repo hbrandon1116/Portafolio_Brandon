@@ -19,9 +19,9 @@ const profile = {
   role: 'Desarrollador de Software',
   tagline:
     'Construyo aplicaciones web rápidas, mantenibles y pensadas para resolver problemas reales.',
-  email: 'tu@correo.com',
-  github: 'https://github.com/tu-usuario',
-  linkedin: 'https://www.linkedin.com/in/tu-usuario',
+  email: 'hbrandon1116@gmail.com',
+  github: 'https://github.com/hbrandon1116',
+  linkedin: 'https://www.linkedin.com/in/brandon-hinga-beltran',
 }
 
 const stack = [
@@ -40,6 +40,7 @@ const stack = [
     items: [
       { name: 'Python', note: 'Lógica y automatización' },
       { name: 'Django', note: 'APIs y paneles de gestión' },
+      { name: 'Node.js', note: 'Servidor y APIs en JavaScript' },
     ],
   },
   {
@@ -48,6 +49,7 @@ const stack = [
     items: [
       { name: 'Supabase', note: 'Auth y backend como servicio' },
       { name: 'PostgreSQL', note: 'Modelado y consultas' },
+      { name: 'MongoDB', note: 'Base de datos NoSQL' },
     ],
   },
 ]
