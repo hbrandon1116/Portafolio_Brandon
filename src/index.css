@@ -17,7 +17,6 @@
     color: #fff;
   }
 
-  /* Foco visible y consistente para navegación con teclado */
   :focus-visible {
     @apply outline-none ring-2 ring-accent-cyan ring-offset-2 ring-offset-ink-950;
   }
@@ -30,7 +29,6 @@
 }
 
 @layer utilities {
-  /* Cuadrícula sutil para el hero, desvanecida hacia los bordes */
   .bg-grid {
     background-image:
       linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),

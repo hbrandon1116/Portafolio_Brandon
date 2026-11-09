@@ -15,7 +15,7 @@ import { projects } from './data/projects'
 /*  Configuración personal: edita estos datos                                 */
 /* -------------------------------------------------------------------------- */
 const profile = {
-  name: 'Tu Nombre',
+  name: 'Brandon Hinga',
   role: 'Desarrollador de Software',
   tagline:
     'Construyo aplicaciones web rápidas, mantenibles y pensadas para resolver problemas reales.',
@@ -127,7 +127,6 @@ function Navbar() {
 }
 
 function Hero() {
-  // Única secuencia de entrada de la página: título, texto y botones en cascada
   const container = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
@@ -212,15 +211,7 @@ function About() {
         <SectionHeading title="Sobre mí" />
         <div className="space-y-6 text-lg leading-relaxed">
           <p>
-            Soy desarrollador de software y me enfoco en entregar código claro,
-            probado y fácil de mantener. Antes de escribir la primera línea,
-            busco entender el problema y a quién va a servir la solución.
-          </p>
-          <p>
-            Trabajo con responsabilidad y constancia: cumplo los plazos,
-            comunico los avances y dedico tiempo cada semana a aprender mejores
-            prácticas. Para mí, mejorar de forma continua es parte del trabajo,
-            no un extra.
+            Soy desarrollador de software con una mentalidad orientada a resultados y a la mejora continua. Mi formación me ha enseñado el valor del esfuerzo constante, la responsabilidad frente a los retos complejos y la importancia de la ejecución precisa. Disfruto diseñando y construyendo aplicaciones web completas (desde interfaces interactivas hasta arquitecturas backend sólidas) y colaborando en equipos donde el liderazgo y la sincronización son clave. Mi objetivo en cada proyecto es claro: superar los límites técnicos, dominar nuevas tecnologías y entregar plataformas eficientes que resuelvan problemas reales de manera óptima.
           </p>
           <ul className="grid gap-3 pt-2 sm:grid-cols-3">
             {['Enfoque en resultados', 'Responsabilidad', 'Mejora continua'].map(
